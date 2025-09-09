@@ -96,7 +96,7 @@ body {
   color: #222;
   margin-bottom: 20px;
   margin-left: 0px;
-  margin-right : 5px;
+  margin-right: 5px;
 }
 .left-column header h2 {
   font-family: 'Poppins', sans-serif;
@@ -104,7 +104,7 @@ body {
   font-size: 1.9rem;
   color: #555;
   margin-bottom: 15px;
-   margin-left: 0px;
+  margin-left: 0px;
   margin-right: 0px;
 }
 .left-column header h4 {
@@ -176,7 +176,8 @@ body {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.right-column section p, .right-column section ul {
+.right-column section p,
+.right-column section ul {
   font-family: 'Inter', sans-serif;
   font-size: 1.4rem;
   color: #444;
@@ -186,15 +187,11 @@ body {
   margin-bottom: 0px;
 }
 
-/* Form, footer remain same (can reuse previous CSS) */
-/* Contact Form */
-
-/* Contact Form - Clean, aligned */
 /* Contact Section */
 #contact {
-  max-width: 950px;     /* narrower than other cards */
-  margin: 0 auto;       /* center it nicely */
-  padding: 40px 95px;   /* reduce padding */
+  max-width: 950px; /* narrower than other cards */
+  margin: 0 auto;
+  padding: 40px 95px;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
@@ -209,7 +206,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* Form inside Contact */
 #contact form {
   display: flex;
   flex-direction: column;
@@ -224,7 +220,7 @@ body {
   margin-bottom: 4px;
 }
 
-#contact input, 
+#contact input,
 #contact textarea {
   width: 100%;
   padding: 12px 14px;
@@ -235,7 +231,7 @@ body {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#contact input:focus, 
+#contact input:focus,
 #contact textarea:focus {
   border-color: #ff7e5f;
   box-shadow: 0 0 5px rgba(255, 126, 95, 0.4);
@@ -243,7 +239,7 @@ body {
 }
 
 #contact textarea {
-  min-height: 160px;   /* smaller than before */
+  min-height: 160px;
 }
 
 #contact button {
@@ -265,7 +261,55 @@ body {
   transform: translateY(-2px);
 }
 
+/* Social icons */
+.social-icons {
+  margin-top: 10px;
+}
+.social-icons a {
+  margin-right: 15px;
+  margin-left: 65px;
+  font-size: 2.5rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: #0077b5;
+  transform: scale(1.9);
+}
+.social-icons a:first-child i {
+  color: #0077b5;
+}
+.social-icons a:last-child i {
+  color: #000;
+}
 
+/* About Me Section */
+#about {
+  margin-top: 30px;
+  padding: 10px 0;
+  text-align: left;
+  width: 100%;
+  max-width: none;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+#about h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #01030f;
+  margin-bottom: 15px;
+}
+#about p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 1.9;
+  margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
@@ -287,60 +331,70 @@ body {
   }
 }
 
-/* Social icons styling */
-.social-icons {
-  margin-top: 10px;
-}
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  /* Sidebar becomes top navbar */
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 0;
+  }
+  .sidebar ul {
+    flex-direction: row;
+    gap: 10px;
+    width: auto;
+  }
+  .sidebar a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    width: auto;
+  }
 
-.social-icons a {
-  margin-right: 15px;
-  margin-left: 65px;
-  font-size: 2.5rem;
-  color: #333;
-  transition: color 0.3s ease;
-}
+  /* Content stacks */
+  .content {
+    margin-left: 0;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .left-column {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    top: 0;
+  }
+  .right-column {
+    width: 100%;
+  }
 
-.social-icons a:hover {
-  color: #0077b5; /* LinkedIn blue */
-  transform: scale(1.9); /* optional hover enlarge */
+  /* Headings shrink */
+  .left-column header h1 {
+    font-size: 2rem;
+  }
+  .left-column header h2 {
+    font-size: 1.2rem;
+  }
+  .left-column header p {
+    font-size: 1rem;
+  }
+  .right-column section h2 {
+    font-size: 1.6rem;
+  }
 
-}
-
-.social-icons a:first-child i {
-  color: #0077b5; /* LinkedIn blue */
-}
-
-.social-icons a:last-child i {
-  color: #000; /* GitHub black */
-}
-
-/* About Me Section */
-/* About Me Section */
-#about {
-  margin-top: 30px;
-  padding: 10px 0;
-  text-align: left;
-  width: 100%;            /* take full right column width */
-  max-width: none;        /* remove limit that causes empty space */
-  background: none;       /* remove card look */
-  box-shadow: none;       /* no shadow */
-  border-radius: 0;       /* no rounded corners */
-}
-
-#about h3 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #01030f;
-  margin-bottom: 15px;
-}
-
-#about p {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.4rem;
-  color: #333;
-  line-height: 1.9;
-  margin: 0;                 /* align flush with column */
-  text-align: justify;       /* neat like Word */
-  text-justify: inter-word;
+  /* Contact section */
+  #contact {
+    padding: 20px;
+  }
+  #contact input,
+  #contact textarea {
+    font-size: 1rem;
+  }
+  #contact button {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
 }
