@@ -35,6 +35,8 @@ body {
   flex-direction: column;
   align-items: center;
   border-radius: 0 20px 20px 0;
+  transition: transform 0.3s ease;
+  z-index: 1000;
 }
 
 .sidebar ul {
@@ -72,10 +74,28 @@ body {
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+/* Hamburger */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
 /* Main content two-column layout */
 .content {
   display: flex;
-  margin-left: 240px; /* leave space for sidebar */
+  margin-left: 240px;
   gap: 40px;
   padding: 50px 30px;
   align-items: flex-start;
@@ -87,7 +107,6 @@ body {
   flex-shrink: 0;
   position: sticky;
   top: 50px;
-  height: fit-content;
 }
 .left-column header h1 {
   font-family: 'Poppins', sans-serif;
@@ -95,46 +114,32 @@ body {
   font-size: 3.7rem;
   color: #222;
   margin-bottom: 20px;
-  margin-left: 0px;
-  margin-right: 5px;
 }
 .left-column header h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
   font-size: 1.9rem;
   color: #555;
   margin-bottom: 15px;
-  margin-left: 0px;
-  margin-right: 0px;
 }
 .left-column header h4 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
   font-size: 1.6rem;
   color: #555;
-  margin-left: 45px;
-  margin-right: 45px;
+  margin: 0 45px;
 }
 .left-column header p {
-  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  margin: 0 25px;
   color: #666;
-  font-size: 1.9rem;
-  margin-right: 25px;
-  margin-left: 25px;
 }
 .left-column .btn-resume {
   margin-top: 15px;
   display: inline-block;
   padding: 12px 25px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  text-decoration: none;
   border-radius: 40px;
   background: linear-gradient(45deg, #ff7e5f, #feb47b);
   color: white;
 }
 
-/* Right column sections */
+/* Right column */
 .right-column {
   flex: 1;
   display: flex;
@@ -146,102 +151,50 @@ body {
   padding: 40px 35px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.5s ease;
 }
 .right-column section:nth-child(even) {
   background: #f5f8fa;
 }
 .right-column section h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
   font-size: 2.5rem;
   color: #ff7e5f;
   margin-bottom: 20px;
 }
 .right-column section h3 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
   font-size: 1.8rem;
   color: #333;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin: 20px 0 10px;
 }
-.right-column section h4 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: #333;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.right-column section p,
-.right-column section ul {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.4rem;
+.right-column section p {
+  font-size: 1.1rem;
   color: #444;
   line-height: 1.8;
-}
-.right-column section ul li {
-  margin-bottom: 0px;
 }
 
 /* Contact Section */
 #contact {
-  max-width: 950px; /* narrower than other cards */
+  max-width: 950px;
   margin: 0 auto;
   padding: 40px 95px;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
-
 #contact h2 {
-  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  font-weight: 700;
   text-align: center;
   color: #ff7e5f;
   margin-bottom: 10px;
 }
-
-#contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-#contact label {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: #444;
-  margin-bottom: 4px;
-}
-
 #contact input,
 #contact textarea {
   width: 100%;
   padding: 12px 14px;
-  font-size: 1.9rem;
+  font-size: 1rem;
   border: 1.5px solid #ccc;
   border-radius: 10px;
-  font-family: 'Inter', sans-serif;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10px;
 }
-
-#contact input:focus,
-#contact textarea:focus {
-  border-color: #ff7e5f;
-  box-shadow: 0 0 5px rgba(255, 126, 95, 0.4);
-  outline: none;
-}
-
-#contact textarea {
-  min-height: 160px;
-}
-
 #contact button {
   align-self: center;
   background: linear-gradient(45deg, #ff7e5f, #feb47b);
@@ -250,80 +203,18 @@ body {
   padding: 12px 25px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  transition: transform 0.2s ease, background 0.3s ease;
 }
 
-#contact button:hover {
-  background: linear-gradient(45deg, #feb47b, #ff7e5f);
-  transform: translateY(-2px);
-}
-
-/* Social icons */
-.social-icons {
-  margin-top: 10px;
-}
-.social-icons a {
-  margin-right: 15px;
-  margin-left: 65px;
-  font-size: 2.5rem;
-  color: #333;
-  transition: color 0.3s ease;
-}
-.social-icons a:hover {
-  color: #0077b5;
-  transform: scale(1.9);
-}
-.social-icons a:first-child i {
-  color: #0077b5;
-}
-.social-icons a:last-child i {
-  color: #000;
-}
-
-/* About Me Section */
-#about {
-  margin-top: 30px;
-  padding: 10px 0;
-  text-align: left;
-  width: 100%;
-  max-width: none;
-  background: none;
-  box-shadow: none;
-  border-radius: 0;
-}
-#about h3 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #01030f;
-  margin-bottom: 15px;
-}
-#about p {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.4rem;
-  color: #333;
-  line-height: 1.9;
-  margin: 0;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 1024px) {
   .content {
     flex-direction: column;
     margin-left: 0;
     padding: 20px;
-    align-items: center;
   }
   .left-column {
     width: 100%;
     position: relative;
-    top: 0;
-    margin-bottom: 30px;
     text-align: center;
   }
   .right-column {
@@ -331,70 +222,43 @@ body {
   }
 }
 
-/* Mobile adjustments */
 @media (max-width: 768px) {
-  /* Sidebar becomes top navbar */
+  .hamburger {
+    display: flex;
+  }
+
   .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px;
+    transform: translateX(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
     border-radius: 0;
   }
-  .sidebar ul {
-    flex-direction: row;
-    gap: 10px;
-    width: auto;
-  }
-  .sidebar a {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-    width: auto;
+  .sidebar.active {
+    transform: translateX(0);
   }
 
-  /* Content stacks */
   .content {
     margin-left: 0;
+    padding: 15px;
     flex-direction: column;
-    padding: 20px;
-  }
-  .left-column {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
-    position: relative;
-    top: 0;
-  }
-  .right-column {
-    width: 100%;
   }
 
-  /* Headings shrink */
   .left-column header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .left-column header h2 {
     font-size: 1.2rem;
   }
   .left-column header p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   .right-column section h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
-
-  /* Contact section */
-  #contact {
-    padding: 20px;
-  }
-  #contact input,
-  #contact textarea {
-    font-size: 1rem;
-  }
-  #contact button {
-    font-size: 0.9rem;
-    padding: 10px 18px;
+  .right-column section p {
+    font-size: 0.95rem;
   }
 }

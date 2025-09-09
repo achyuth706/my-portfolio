@@ -5,9 +5,12 @@ document.querySelectorAll('nav a').forEach(anchor => {
     const targetID = this.getAttribute('href').slice(1);
     const targetSection = document.getElementById(targetID);
     window.scrollTo({
-      top: targetSection.offsetTop - 20, // offset for top spacing
+      top: targetSection.offsetTop - 20,
       behavior: 'smooth'
     });
+
+    // 🔥 Close sidebar after clicking (on mobile)
+    document.querySelector('.sidebar').classList.remove('active');
   });
 });
 
@@ -18,7 +21,6 @@ const sections = document.querySelectorAll('section');
 window.addEventListener('scroll', () => {
   const scrollPos = window.scrollY || document.documentElement.scrollTop;
 
-  // Highlight sidebar
   sections.forEach(section => {
     const top = section.offsetTop - 100;
     const bottom = top + section.offsetHeight;
@@ -63,4 +65,13 @@ window.addEventListener('DOMContentLoaded', () => {
       section.style.transform = 'translateY(0)';
     }, index * 200);
   });
+
+  // 🔥 Hamburger menu toggle
+  const hamburger = document.querySelector('.hamburger');
+  const sidebar = document.querySelector('.sidebar');
+  if (hamburger && sidebar) {
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  }
 });
