@@ -1,0 +1,346 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 18px;
+  color: #333;
+  background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 190px;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  padding-top: 50px;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 3px 0 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 20px 20px 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  width: 120%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 25px;
+  width: 90%;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(5px);
+  text-align: center;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #ff7e5f;
+  color: #fff;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Main content two-column layout */
+.content {
+  display: flex;
+  margin-left: 240px; /* leave space for sidebar */
+  gap: 40px;
+  padding: 50px 30px;
+  align-items: flex-start;
+}
+
+/* Left column */
+.left-column {
+  width: 450px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 50px;
+  height: fit-content;
+}
+.left-column header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3.7rem;
+  color: #222;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right : 5px;
+}
+.left-column header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: #555;
+  margin-bottom: 15px;
+   margin-left: 0px;
+  margin-right: 0px;
+}
+.left-column header h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #555;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.left-column header p {
+  font-family: 'Inter', sans-serif;
+  color: #666;
+  font-size: 1.9rem;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+.left-column .btn-resume {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 12px 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 40px;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  color: white;
+}
+
+/* Right column sections */
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.right-column section {
+  background: white;
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+.right-column section:nth-child(even) {
+  background: #f5f8fa;
+}
+.right-column section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #ff7e5f;
+  margin-bottom: 20px;
+}
+.right-column section h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.right-column section h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.right-column section p, .right-column section ul {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  color: #444;
+  line-height: 1.8;
+}
+.right-column section ul li {
+  margin-bottom: 0px;
+}
+
+/* Form, footer remain same (can reuse previous CSS) */
+/* Contact Form */
+
+/* Contact Form - Clean, aligned */
+/* Contact Section */
+#contact {
+  max-width: 950px;     /* narrower than other cards */
+  margin: 0 auto;       /* center it nicely */
+  padding: 40px 95px;   /* reduce padding */
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+#contact h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ff7e5f;
+  margin-bottom: 10px;
+}
+
+/* Form inside Contact */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#contact label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+#contact input, 
+#contact textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1.9rem;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact input:focus, 
+#contact textarea:focus {
+  border-color: #ff7e5f;
+  box-shadow: 0 0 5px rgba(255, 126, 95, 0.4);
+  outline: none;
+}
+
+#contact textarea {
+  min-height: 160px;   /* smaller than before */
+}
+
+#contact button {
+  align-self: center;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#contact button:hover {
+  background: linear-gradient(45deg, #feb47b, #ff7e5f);
+  transform: translateY(-2px);
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    margin-left: 0;
+    padding: 20px;
+    align-items: center;
+  }
+  .left-column {
+    width: 100%;
+    position: relative;
+    top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .right-column {
+    width: 100%;
+  }
+}
+
+/* Social icons styling */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  margin-left: 65px;
+  font-size: 2.5rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0077b5; /* LinkedIn blue */
+  transform: scale(1.9); /* optional hover enlarge */
+
+}
+
+.social-icons a:first-child i {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.social-icons a:last-child i {
+  color: #000; /* GitHub black */
+}
+
+/* About Me Section */
+/* About Me Section */
+#about {
+  margin-top: 30px;
+  padding: 10px 0;
+  text-align: left;
+  width: 100%;            /* take full right column width */
+  max-width: none;        /* remove limit that causes empty space */
+  background: none;       /* remove card look */
+  box-shadow: none;       /* no shadow */
+  border-radius: 0;       /* no rounded corners */
+}
+
+#about h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #01030f;
+  margin-bottom: 15px;
+}
+
+#about p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 1.9;
+  margin: 0;                 /* align flush with column */
+  text-align: justify;       /* neat like Word */
+  text-justify: inter-word;
+}
