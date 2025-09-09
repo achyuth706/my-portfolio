@@ -20,11 +20,12 @@ body {
   display: flex;
   width: 100%;
   min-height: 100vh;
+  flex-direction: row;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 200px;
+  width: 190px;
   background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
   padding-top: 50px;
   position: fixed;
@@ -35,12 +36,11 @@ body {
   flex-direction: column;
   align-items: center;
   border-radius: 0 20px 20px 0;
-  transition: transform 0.3s ease;
 }
 
 .sidebar ul {
   list-style: none;
-  width: 100%;
+  width: 120%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,14 +52,17 @@ body {
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 1.05rem;
-  padding: 12px 20px;
-  width: 85%;
-  text-align: center;
-  border-radius: 40px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 25px;
+  width: 90%;
+  border-radius: 50px;
   transition: all 0.3s ease;
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(5px);
+  text-align: center;
 }
 
 .sidebar a:hover,
@@ -70,25 +73,7 @@ body {
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* Hamburger (hidden on desktop) */
-.hamburger {
-  display: none;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 1001;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 5px;
-}
-.hamburger span {
-  width: 28px;
-  height: 3px;
-  background: #333;
-  border-radius: 2px;
-}
-
-/* Content */
+/* Main content two-column layout */
 .content {
   display: flex;
   margin-left: 240px;
@@ -103,27 +88,38 @@ body {
   flex-shrink: 0;
   position: sticky;
   top: 50px;
+  height: fit-content;
 }
 .left-column header h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 3.7rem;
   color: #222;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .left-column header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+.left-column header h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   font-size: 1.6rem;
   color: #555;
-  margin-bottom: 10px;
 }
 .left-column header p {
-  font-size: 1.3rem;
+  font-family: 'Inter', sans-serif;
   color: #666;
+  font-size: 1.9rem;
 }
 .left-column .btn-resume {
   margin-top: 15px;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 25px;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   text-decoration: none;
   border-radius: 40px;
@@ -131,56 +127,152 @@ body {
   color: white;
 }
 
-/* Right column */
+/* Right column sections */
 .right-column {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
 }
 .right-column section {
   background: white;
-  padding: 30px 25px;
-  border-radius: 15px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.right-column section:nth-child(even) {
+  background: #f5f8fa;
 }
 .right-column section h2 {
-  font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
   color: #ff7e5f;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
-.right-column section p {
-  font-size: 1rem;
-  line-height: 1.6;
+.right-column section h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.right-column section h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.right-column section p,
+.right-column section ul {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  color: #444;
+  line-height: 1.8;
 }
 
-/* Contact */
+/* Contact Section */
 #contact {
-  padding: 25px;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 95px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
+
 #contact h2 {
-  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
   text-align: center;
+  color: #ff7e5f;
+  margin-bottom: 10px;
 }
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 #contact input,
 #contact textarea {
   width: 100%;
-  padding: 10px 14px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  padding: 12px 14px;
+  font-size: 1.1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
 }
+
+#contact textarea {
+  min-height: 140px;
+}
+
 #contact button {
+  align-self: center;
   background: linear-gradient(45deg, #ff7e5f, #feb47b);
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border-radius: 20px;
   cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+#contact button:hover {
+  background: linear-gradient(45deg, #feb47b, #ff7e5f);
+  transform: translateY(-2px);
 }
 
-/* Responsive */
+/* Social icons */
+.social-icons {
+  margin-top: 10px;
+}
+.social-icons a {
+  margin: 0 10px;
+  font-size: 2rem;
+  color: #333;
+}
+.social-icons a:first-child i {
+  color: #0077b5;
+}
+.social-icons a:last-child i {
+  color: #000;
+}
+
+/* About Me */
+#about {
+  margin-top: 30px;
+  padding: 10px 0;
+  text-align: left;
+  width: 100%;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+#about h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #01030f;
+  margin-bottom: 15px;
+}
+#about p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Tablet adjustments */
 @media (max-width: 1024px) {
   .content {
     flex-direction: column;
@@ -190,6 +282,8 @@ body {
   .left-column {
     width: 100%;
     position: relative;
+    top: 0;
+    margin-bottom: 30px;
     text-align: center;
   }
   .right-column {
@@ -197,26 +291,16 @@ body {
   }
 }
 
+/* Mobile adjustments */
 @media (max-width: 768px) {
-  /* Show hamburger */
-  .hamburger {
-    display: flex;
-  }
-
-  /* Hide sidebar by default */
+  /* Sidebar becomes top stacked nav */
   .sidebar {
-    transform: translateY(-100%);
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     height: auto;
-    padding: 20px 10px;
+    flex-direction: column;
+    padding: 15px 10px;
     border-radius: 0;
-    z-index: 1000;
-  }
-  .sidebar.active {
-    transform: translateY(0);
   }
   .sidebar ul {
     flex-direction: column;
@@ -226,26 +310,48 @@ body {
   .sidebar a {
     font-size: 1rem;
     padding: 10px;
+    width: 100%;
   }
 
-  /* Content */
+  /* Content stacks */
   .content {
     margin-left: 0;
+    flex-direction: column;
     padding: 15px;
   }
+  .left-column {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .right-column {
+    width: 100%;
+  }
+
+  /* Fonts smaller */
   .left-column header h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   .left-column header h2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .left-column header p {
     font-size: 0.95rem;
   }
   .right-column section h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
-  .right-column section p {
+
+  /* Contact */
+  #contact {
+    padding: 20px;
+  }
+  #contact input,
+  #contact textarea {
     font-size: 0.95rem;
+  }
+  #contact button {
+    font-size: 0.9rem;
+    padding: 10px 16px;
   }
 }
