@@ -8,9 +8,6 @@ document.querySelectorAll('nav a').forEach(anchor => {
       top: targetSection.offsetTop - 20, // offset for top spacing
       behavior: 'smooth'
     });
-
-    // Close sidebar on mobile after clicking a link
-    document.querySelector('.sidebar').classList.remove('active');
   });
 });
 
@@ -66,16 +63,4 @@ window.addEventListener('DOMContentLoaded', () => {
       section.style.transform = 'translateY(0)';
     }, index * 200);
   });
-});
-
-// ✅ Hamburger menu toggle
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.querySelector('.hamburger');
-  const sidebar = document.querySelector('.sidebar');
-
-  if (hamburger && sidebar) {
-    hamburger.addEventListener('click', () => {
-      sidebar.classList.toggle('active');
-    });
-  }
 });
