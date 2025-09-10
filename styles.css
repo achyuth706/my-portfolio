@@ -8,7 +8,7 @@
 /* Fonts */
 body {
   font-family: 'Inter', Arial, sans-serif;
-  font-size: 16px; /* 🔥 base font size smaller */
+  font-size: 18px;
   color: #333;
   background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
   min-height: 100vh;
@@ -111,53 +111,33 @@ body {
 .left-column header h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 3.7rem;
   color: #222;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .left-column header h2 {
-  font-size: 1.4rem;
+  font-size: 1.9rem;
   color: #555;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 .left-column header h4 {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: #555;
-  margin: 0 30px;
+  margin: 0 45px;
 }
 .left-column header p {
-  font-size: 1rem;
-  margin: 8px 20px;
+  font-size: 1.2rem;   /* 🔥 increase this (try 1.2–1.4rem for better balance) */
+  margin: 10px 25px;
   color: #444;
-  text-align: center;
+  text-align: center;  /* optional: center align to match resume button */
 }
 .left-column .btn-resume {
-  margin-top: 12px;
+  margin-top: 15px;
   display: inline-block;
   padding: 12px 25px;
   border-radius: 40px;
   background: linear-gradient(45deg, #ff7e5f, #feb47b);
   color: white;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-/* About Section */
-#about {
-  margin-top: 25px;
-  padding: 0;
-}
-#about h3 {
-  font-size: 1.8rem; /* 🔥 bigger heading */
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 12px;
-}
-#about p {
-  font-size: 0.95rem; /* 🔥 smaller text */
-  line-height: 1.55;
-  color: #333;
-  text-align: justify;
 }
 
 /* Right column */
@@ -165,54 +145,49 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 40px;
 }
 .right-column section {
   background: white;
-  padding: 30px 25px;
-  border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 .right-column section:nth-child(even) {
   background: #f5f8fa;
 }
 .right-column section h2 {
-  font-size: 2rem; /* 🔥 make section titles bigger */
-  font-weight: 700;
+  font-size: 2.5rem;
   color: #ff7e5f;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .right-column section h3 {
-  font-size: 1.2rem; /* 🔥 smaller than h2 */
-  font-weight: 600;
+  font-size: 1.9rem;
   color: #333;
-  margin: 15px 0 8px;
+  margin: 20px 0 10px;
 }
 .right-column section h4 {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.6rem;
   color: #333;
-  margin: 12px 0 8px;
+  margin: 20px 0 10px;
 }
-.right-column section p,
-.right-column section ul li {
-  font-size: 0.95rem; /* 🔥 clean and smaller */
-  line-height: 1.6;
+.right-column section p {
+  font-size: 1.3rem;
   color: #444;
+  line-height: 1.8;
 }
 
 /* Contact Section */
 #contact {
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
-  padding: 30px 40px;
+  padding: 40px 95px;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 #contact h2 {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 2rem;
   text-align: center;
   color: #ff7e5f;
   margin-bottom: 10px;
@@ -220,8 +195,8 @@ body {
 #contact input,
 #contact textarea {
   width: 100%;
-  padding: 10px 12px;
-  font-size: 0.95rem;
+  padding: 12px 14px;
+  font-size: 1rem;
   border: 1.5px solid #ccc;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -231,11 +206,9 @@ body {
   background: linear-gradient(45deg, #ff7e5f, #feb47b);
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 0.95rem;
-  font-weight: 600;
 }
 
 /* Responsive */
@@ -280,28 +253,18 @@ body {
   }
 
   .left-column header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .left-column header h2 {
-    font-size: 1.1rem;
-  }
-  .left-column header h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .left-column header p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
-
-  #about p,
-  .right-column section p,
-  .right-column section ul li {
-    font-size: 0.9rem;
-  }
-
   .right-column section h2 {
     font-size: 1.4rem;
   }
-  .right-column section h3 {
-    font-size: 1rem;
+  .right-column section p {
+    font-size: 0.95rem;
   }
 }
