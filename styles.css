@@ -290,13 +290,13 @@ body {
   #about p,
   .right-column section p,
   .right-column section ul li {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .right-column section h2 {
     font-size: 1.3rem;
   }
   .right-column section h3 {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 }
