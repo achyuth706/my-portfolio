@@ -126,7 +126,7 @@ body {
   margin: 0 30px;
 }
 .left-column header p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 8px 20px;
   color: #444;
   text-align: center;
@@ -159,6 +159,7 @@ body {
   color: #333;
   text-align: justify;
 }
+
 
 
 /* Contact Section */
@@ -248,7 +249,9 @@ body {
   .left-column header h4 {
     font-size: 1rem;
   }
- 
+  .left-column header p {
+    font-size: 0.9rem;
+  }
 
   #about p,
   .right-column section p,
