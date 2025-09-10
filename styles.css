@@ -8,7 +8,7 @@
 /* Fonts */
 body {
   font-family: 'Inter', Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px; /* 🔥 base font size smaller */
   color: #333;
   background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
   min-height: 100vh;
@@ -121,12 +121,12 @@ body {
   margin-bottom: 12px;
 }
 .left-column header h4 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
   margin: 0 30px;
 }
 .left-column header p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 8px 20px;
   color: #444;
   text-align: center;
@@ -148,13 +148,14 @@ body {
   padding: 0;
 }
 #about h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem; /* 🔥 bigger heading */
+  font-weight: 700;
   color: #111;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 #about p {
-  font-size: 1rem;   /* 🔥 reduced font size */
-  line-height: 1.65;
+  font-size: 0.95rem; /* 🔥 smaller text */
+  line-height: 1.55;
   color: #333;
   text-align: justify;
 }
@@ -176,23 +177,26 @@ body {
   background: #f5f8fa;
 }
 .right-column section h2 {
-  font-size: 1.8rem;
+  font-size: 2rem; /* 🔥 make section titles bigger */
+  font-weight: 700;
   color: #ff7e5f;
   margin-bottom: 15px;
 }
 .right-column section h3 {
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* 🔥 smaller than h2 */
+  font-weight: 600;
   color: #333;
   margin: 15px 0 8px;
 }
 .right-column section h4 {
   font-size: 1rem;
+  font-weight: 600;
   color: #333;
   margin: 12px 0 8px;
 }
 .right-column section p,
 .right-column section ul li {
-  font-size: 0.95rem;  /* 🔥 smaller text for readability */
+  font-size: 0.95rem; /* 🔥 clean and smaller */
   line-height: 1.6;
   color: #444;
 }
@@ -208,6 +212,7 @@ body {
 }
 #contact h2 {
   font-size: 1.6rem;
+  font-weight: 700;
   text-align: center;
   color: #ff7e5f;
   margin-bottom: 10px;
@@ -284,19 +289,19 @@ body {
     font-size: 1rem;
   }
   .left-column header p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   #about p,
   .right-column section p,
   .right-column section ul li {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .right-column section h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
   .right-column section h3 {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 }
