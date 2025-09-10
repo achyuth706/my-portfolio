@@ -126,9 +126,10 @@ body {
   margin: 0 45px;
 }
 .left-column header p {
-  font-size: 1.0rem;
-  margin: 0 25px;
-  color: #666;
+  font-size: 1.2rem;   /* 🔥 increase this (try 1.2–1.4rem for better balance) */
+  margin: 10px 25px;
+  color: #444;
+  text-align: center;  /* optional: center align to match resume button */
 }
 .left-column .btn-resume {
   margin-top: 15px;
