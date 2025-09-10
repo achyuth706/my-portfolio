@@ -162,12 +162,17 @@ body {
   margin-bottom: 20px;
 }
 .right-column section h3 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
+  color: #333;
+  margin: 20px 0 10px;
+}
+.right-column section h4 {
+  font-size: 1.6rem;
   color: #333;
   margin: 20px 0 10px;
 }
 .right-column section p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #444;
   line-height: 1.8;
 }
