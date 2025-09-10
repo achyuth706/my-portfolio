@@ -8,7 +8,7 @@
 /* Fonts */
 body {
   font-family: 'Inter', Arial, sans-serif;
-  font-size: 18px;  /* 🔥 base font larger */
+  font-size: 18px;
   color: #333;
   background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
   min-height: 100vh;
@@ -53,10 +53,7 @@ body {
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 1.2rem; /* 🔥 sidebar text bigger */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 1.2rem;
   padding: 12px 25px;
   width: 90%;
   border-radius: 50px;
@@ -92,12 +89,12 @@ body {
   border-radius: 2px;
 }
 
-/* Main content two-column layout */
+/* Main content layout */
 .content {
   display: flex;
   margin-left: 240px;
   gap: 50px;
-  padding: 60px 40px;
+  padding: 60px 50px;
   align-items: flex-start;
 }
 
@@ -111,17 +108,17 @@ body {
 .left-column header h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 3.8rem;   /* 🔥 much bigger for laptop */
+  font-size: 3.5rem;   /* 🔥 bigger */
   color: #222;
   margin-bottom: 20px;
 }
 .left-column header h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #555;
   margin-bottom: 12px;
 }
 .left-column header h4 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #555;
   margin: 0 30px;
 }
@@ -153,7 +150,7 @@ body {
   margin-bottom: 12px;
 }
 #about p {
-  font-size: 1.05rem;
+  font-size: 1rem;   /* 🔥 smaller than headings */
   line-height: 1.7;
   color: #333;
   text-align: justify;
@@ -169,32 +166,32 @@ body {
 }
 .right-column section {
   background: white;
-  padding: 40px 35px;
+  padding: 35px 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 .right-column section:nth-child(even) {
   background: #f5f8fa;
 }
 .right-column section h2 {
-  font-size: 2.6rem;   /* 🔥 big section headings */
+  font-size: 2.4rem;   /* 🔥 section headings large */
   font-weight: 700;
   color: #ff7e5f;
   margin-bottom: 18px;
 }
 .right-column section h3 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin: 15px 0 10px;
 }
 .right-column section h4 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin: 12px 0 8px;
 }
 .right-column section p,
 .right-column section ul li {
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: #444;
 }
@@ -219,7 +216,7 @@ body {
 #contact textarea {
   width: 100%;
   padding: 12px 14px;
-  font-size: 1.05rem;
+  font-size: 1rem;
   border: 1.5px solid #ccc;
   border-radius: 10px;
   margin-bottom: 12px;
@@ -232,16 +229,16 @@ body {
   padding: 14px 28px;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
-/* Responsive */
+/* Responsive – shrink only for tablets/phones */
 @media (max-width: 1024px) {
   .content {
     flex-direction: column;
     margin-left: 0;
-    padding: 20px;
+    padding: 25px;
   }
   .left-column {
     width: 100%;
@@ -282,13 +279,13 @@ body {
     font-size: 2rem;
   }
   .left-column header h2 {
-    font-size: 1.1rem;
-  }
-  .left-column header h4 {
     font-size: 1rem;
   }
-  .left-column header p {
+  .left-column header h4 {
     font-size: 0.9rem;
+  }
+  .left-column header p {
+    font-size: 0.85rem;
   }
 
   #about p,
@@ -298,9 +295,9 @@ body {
   }
 
   .right-column section h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   .right-column section h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
