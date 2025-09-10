@@ -8,11 +8,11 @@
 /* Fonts */
 body {
   font-family: 'Inter', Arial, sans-serif;
-  font-size: 17px;
+  font-size: 18px;  /* 🔥 base font larger */
   color: #333;
   background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
   min-height: 100vh;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* Container */
@@ -24,7 +24,7 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 190px;
+  width: 200px;
   background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
   padding-top: 50px;
   position: fixed;
@@ -53,7 +53,7 @@ body {
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.2rem; /* 🔥 sidebar text bigger */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,14 +96,14 @@ body {
 .content {
   display: flex;
   margin-left: 240px;
-  gap: 40px;
-  padding: 50px 30px;
+  gap: 50px;
+  padding: 60px 40px;
   align-items: flex-start;
 }
 
 /* Left column */
 .left-column {
-  width: 450px;
+  width: 480px;
   flex-shrink: 0;
   position: sticky;
   top: 50px;
@@ -111,51 +111,50 @@ body {
 .left-column header h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 3.2rem;   /* 🔥 bigger on laptop */
+  font-size: 3.8rem;   /* 🔥 much bigger for laptop */
   color: #222;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .left-column header h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #555;
   margin-bottom: 12px;
 }
 .left-column header h4 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #555;
   margin: 0 30px;
 }
 .left-column header p {
   font-size: 1.1rem;
-  margin: 8px 20px;
+  margin: 10px 20px;
   color: #444;
   text-align: center;
 }
 .left-column .btn-resume {
-  margin-top: 12px;
+  margin-top: 15px;
   display: inline-block;
-  padding: 14px 28px;
+  padding: 14px 30px;
   border-radius: 40px;
   background: linear-gradient(45deg, #ff7e5f, #feb47b);
   color: white;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
 /* About Section */
 #about {
   margin-top: 25px;
-  padding: 0;
 }
 #about h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #111;
   margin-bottom: 12px;
 }
 #about p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: #333;
   text-align: justify;
 }
@@ -165,77 +164,75 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 35px;
-  max-width: 900px; /* 🔥 keeps cards centered & not too wide */
+  gap: 40px;
+  max-width: 950px;
 }
 .right-column section {
   background: white;
-  padding: 35px 30px;
-  border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 .right-column section:nth-child(even) {
   background: #f5f8fa;
 }
 .right-column section h2 {
-  font-size: 2.2rem;   /* 🔥 bigger headings */
+  font-size: 2.6rem;   /* 🔥 big section headings */
   font-weight: 700;
   color: #ff7e5f;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 .right-column section h3 {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  color: #333;
-  margin: 15px 0 8px;
+  margin: 15px 0 10px;
 }
 .right-column section h4 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  color: #333;
   margin: 12px 0 8px;
 }
 .right-column section p,
 .right-column section ul li {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: #444;
 }
 
 /* Contact Section */
 #contact {
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
-  padding: 35px 40px;
+  padding: 40px 50px;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 #contact h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   text-align: center;
   color: #ff7e5f;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 #contact input,
 #contact textarea {
   width: 100%;
   padding: 12px 14px;
-  font-size: 1rem;
+  font-size: 1.05rem;
   border: 1.5px solid #ccc;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 #contact button {
   align-self: center;
   background: linear-gradient(45deg, #ff7e5f, #feb47b);
   color: white;
   border: none;
-  padding: 12px 25px;
-  border-radius: 20px;
+  padding: 14px 28px;
+  border-radius: 25px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
@@ -301,9 +298,9 @@ body {
   }
 
   .right-column section h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .right-column section h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
