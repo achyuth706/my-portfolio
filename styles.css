@@ -161,7 +161,7 @@ body {
 }
 
 /* Right column */
-.right-column {
+/* .right-column {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -199,7 +199,7 @@ body {
   font-size: 0.95rem; /* 🔥 clean and smaller */
   line-height: 1.6;
   color: #444;
-}
+} */
 
 /* Contact Section */
 #contact {
