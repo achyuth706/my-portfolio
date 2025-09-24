@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>My Portfolio</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Achyuth's Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#experience">Work Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <section id="summary" class="section">
+    <h1>Achyutha Sushanth Ariga</h1>
+    <p>Master's Student in Information Management at UIUC | Ex-Applications Engineer at Oracle Corporation</p>
+  </section>
+
+  <section id="experience" class="section">
+    <h2>WORK EXPERIENCE</h2>
+    <div class="grid">
+      <div class="card experience-card">
+        <h2 class="company">ORACLE CORPORATION</h2>
+        <h4 class="role">Applications Engineer</h4>
+        <ul class="experience-list">
+          <li>Designed and developed 10+ scalable microservices using Java and Spring Boot, incorporating multi-threaded
+            programming to build robust data integration solutions and reduce system downtime by 30% while ensuring
+            optimal performance</li>
+          <li>Engineered and optimized RESTful APIs with JUnit and integration testing, contributing to unit testing
+            practices and reducing response times by 20% across critical systems</li>
+          <li>Enhanced database performance through SQL query optimization, supporting effective data store design and
+            database administration, which improved data retrieval speeds by 25%</li>
+          <li>Developed and refined a user-friendly interface using Oracle JET, aligning with modern JavaScript
+            framework practices and improving tool accessibility by 40%</li>
+          <li>Adopted Agile methodologies and leveraged Git for continuous integration and deployment, ensuring
+            consistent delivery of quality, production-ready software solutions</li>
+        </ul>
+        <h2 class="company">INDIAN INSTITUTE OF TECHNOLOGY, INDORE</h2>
+        <h4 class="role">Intern</h4>
+        <ul class="experience-list">
+          <li>Conducted comprehensive research on noise and vibration control in electric vehicles, proposing innovative
+            solutions to enhance EV performance and comfort</li>
+          <li>Conceptualized a wireless charging mechanism leveraging induction technology, resulting in a prototype
+            with 85% efficiency</li>
+        </ul>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <section id="projects" class="section">
+    <h2>PROJECTS</h2>
+    <div class="projects-grid">
+
+
+      <div class="slide card">
+        <div class="card-body">
+          <h3>Chicago Crime Analysis in PowerBI</h3>
+          <p class="tech">Power BI | SQL | DAX</p>
+          <div class="btn-wrapper">
+            <button class="open-modal fancy-btn" data-modal="modal1">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Chicago Crime Analysis in PowerBI</h3>
+          <p class="tech">Power BI | SQL | DAX</p>
+          <ul>
+            <li>Designed an interactive Power BI dashboard analyzing crime trends in Chicago from 2001 to present.</li>
+            <li>Highlighted patterns over time, major crime types, and arrest vs non-arrest rates.</li>
+            <li>Provided insights into crime distribution by day of the week and time of day.</li>
+            <li>Delivered detailed breakdowns of the most common crime categories.</li>
+          </ul>
+          <img src="./assets/dashboard.jpg" alt="Dashboard Preview" />
+        </div>
+      </div>
+
+
+      <div class="slide card">
+        <div class="card-body">
+          <h3>S&amp;P 500 Prediction with Commodity Prices and Economic Indicators</h3>
+          <p class="tech">Python | Scikit-learn | Data Analysis</p>
+          <div class="btn-wrapper">
+            <button class="open-modal fancy-btn" data-modal="modal2">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>S&amp;P 500 Prediction</h3>
+          <p class="tech">Python | Scikit-learn | Data Analysis</p>
+
+          <h4>Methodology</h4>
+          <ul>
+            <li>Imputed missing values using the mean of each variable.</li>
+            <li>Removed highly correlated predictors (Pearson correlation &gt; 0.9).</li>
+            <li>Standardized features with z-score normalization.</li>
+            <li>Introduced 1-year lagged features to capture temporal dependencies.</li>
+          </ul>
+
+          <h4>Models</h4>
+          <ul>
+            <li><strong>Linear Regression</strong> – interpretable baseline model.</li>
+            <li><strong>Random Forest (100 trees)</strong> – non-linear ensemble, high accuracy.</li>
+          </ul>
+
+          <h4>Results</h4>
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>MSE</th>
+                <th>R²</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Linear Regression</td>
+                <td>0.0955</td>
+                <td>0.8769</td>
+              </tr>
+              <tr>
+                <td>Random Forest</td>
+                <td>0.0311</td>
+                <td>0.9599</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><strong>Random Forest outperformed Linear Regression</strong>, with lagged commodity prices playing a key
+            role in prediction.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h3>Spam Mail Prediction using Machine Learning (SVM)</h3>
+          <p class="tech">Python | Scikit-learn | NLTK</p>
+          <div class="btn-wrapper">
+            <button class="open-modal fancy-btn" data-modal="modal3">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Spam Mail Prediction using Machine Learning (SVM)</h3>
+          <p class="tech">Python | Scikit-learn | NLTK</p>
+          <ul>
+            <li>Built a spam mail classifier using Support Vector Machine (SVM).</li>
+            <li>Implemented preprocessing with NLTK: tokenization, stopword removal, and TF-IDF vectorization.</li>
+            <li>Trained and evaluated the model, achieving high classification accuracy.</li>
+            <li>Delivered a robust solution for distinguishing spam vs. non-spam emails.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="skills" class="section">
+    <h2>SKILLS</h2>
+    <br></br>
+
+    <div class="skills-carousel" aria-roledescription="carousel">
+      <button class="skills-arrow prev" aria-label="Previous slide" type="button">‹</button>
+
+      <div class="skills-viewport" role="group" aria-label="Skills slides">
+        <div class="skills-track">
+
+          <article class="skills-slide" aria-label="Technical Skills" aria-roledescription="slide" aria-hidden="false">
+            <h3 class="skills-title">Technical</h3>
+            <div class="skills-badges">
+              <span>Java</span><span>Python</span><span>Spring Boot</span>
+              <span>REST APIs</span><span>Multithreading</span><span>SQL</span>
+            </div>
+            <p class="skills-note">Backend development, Microservices, Performance tuning, Multithreading</p>
+          </article>
+
+          <article class="skills-slide" aria-label="Data & Analytics Skills" aria-roledescription="slide"
+            aria-hidden="true">
+            <h3 class="skills-title">Data & Analytics</h3>
+            <div class="skills-badges">
+              <span>Power BI</span><span>Pandas</span><span>NumPy</span>
+              <span>Scikit-learn</span><span>ETL</span><span>Visualization</span>
+            </div>
+            <p class="skills-note">Dashboards, ML basics, data wrangling, storytelling.</p>
+          </article>
+
+          <article class="skills-slide" aria-label="Tools & Platforms" aria-roledescription="slide" aria-hidden="true">
+            <h3 class="skills-title">Tools & Platforms</h3>
+            <div class="skills-badges">
+              <span>Git</span><span>CI/CD</span><span>Oracle JET</span>
+              <span>React</span><span>Linux</span><span>Docker</span>
+            </div>
+            <p class="skills-note">Shipping reliably with clean workflows and reviews.</p>
+          </article>
+        </div>
+      </div>
+
+      <button class="skills-arrow next" aria-label="Next slide" type="button">›</button>
+    </div>
+  </section>
+  <section id="contact" class="section contact-section">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="./assets/video-1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="contact-content">
+      <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 Achyuth Ariga | All Rights Reserved</p>
+    <div class="social-links">
+      <a href="https://github.com/achyuth706" target="_blank" class="github">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/achyuthariga/" target="_blank" class="linkedin">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
